@@ -51,6 +51,7 @@ section .container {
 .results {
   border-top: 1px solid #e3e5ec;
   background: #edf2f7;
+  padding: 16px 0;
 }
 
 .card {

@@ -13,14 +13,27 @@ const Results = () => {
     setLocations(Array.from(new Set(data.map((item) => item.division))));
   };
 
-  useEffect(loadData, []);
+  useEffect(() => void loadData(), []);
+
+  if (donations.length === 0) {
+    return (
+      <section className="results">
+        <div className="container">
+          <i>loading...</i>
+        </div>
+      </section>
+    );
+  }
 
   return (
     <section className="results">
       <div className="container">
         <h2>
           Items needed in:
-          <select onChange={(e) => setDivision(e.target.value)}>
+          <select
+            value={division}
+            onChange={(e) => setDivision(e.target.value)}
+          >
             {locations.map((location) => (
               <option>{location}</option>
             ))}
