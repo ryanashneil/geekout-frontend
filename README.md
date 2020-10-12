@@ -2,6 +2,12 @@
 
 > In order to make full use of this repository, you should be familiar with API development
 
+## Steps to get the app up and running
+
+1. run `npm i`
+2. create a `.env` file with one value `REACT_APP_API_URL=XXXXX` (fill in XXXXX with your own API endpoint)
+3. run `npm start`
+
 ## Available Scripts
 
 ### `npm i`
